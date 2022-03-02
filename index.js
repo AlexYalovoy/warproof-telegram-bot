@@ -7,7 +7,9 @@ require('dotenv').config()
 const bot = new Telegraf(process.env.TOKEN)
 const dataObj = JSON.parse(fs.readFileSync("./users.json"));
 let step = 1;
+
 bot.start((ctx) => {
+    step = 1;
     ctx.reply("1.Введіть будь ласка своє Ім'я");
 });
 
